@@ -1,0 +1,23 @@
+{
+  "name": "recipe-collector",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3001",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3001",
+    "transcribe": "node --env-file-if-exists=.env.local scripts/transcribe-pending.mjs",
+    "check": "node --env-file-if-exists=.env.local scripts/fact-check.mjs",
+    "build:share": "SHARE_BUILD=1 next build",
+    "preview:share": "python3 -m http.server 3002 --directory out"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
+    "gray-matter": "^4.0.3",
+    "heic-to": "^1.5.2",
+    "next": "^16.3.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules
+.next
+.env.local
+data/inbox/*
+!data/inbox/.gitkeep
+data/kroger.json
+out
